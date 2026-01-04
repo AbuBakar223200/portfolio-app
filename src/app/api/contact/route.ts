@@ -85,8 +85,13 @@ ${message}
   } catch (error) {
     console.error("Error processing contact form:", error);
     return NextResponse.json(
-      { success: false, error: "Failed to send message. Please try again." },
+      { 
+        success: false, 
+        error: error instanceof Error ? error.message : "Failed to send message",
+        details: error 
+      },
       { status: 500 }
     );
   }
 }
+
