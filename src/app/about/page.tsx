@@ -17,61 +17,73 @@ const skills: Skill[] = [
   { name: "React", category: "frontend", level: 90, icon: Code2 },
   { name: "Vite", category: "frontend", level: 85, icon: Zap },
   { name: "JavaScript", category: "frontend", level: 90, icon: Terminal },
-  { name: "Tailwind CSS", category: "frontend", level: 95, icon: Layout },
   { name: "HTML/CSS", category: "frontend", level: 95, icon: Globe },
+  { name: "Tailwind CSS", category: "frontend", level: 95, icon: Layout },
   { name: "Framer Motion", category: "frontend", level: 75, icon: Layers },
-  // Backend
+  { name: "JavaFX", category: "frontend", level: 80, icon: Coffee },
+  
+  // Backend & Database
   { name: "Node.js", category: "backend", level: 80, icon: Server },
   { name: "Express.js", category: "backend", level: 80, icon: Box },
   { name: "MongoDB", category: "backend", level: 75, icon: Database },
+  { name: "MySQL Server", category: "backend", level: 75, icon: Database },
   { name: "REST APIs", category: "backend", level: 85, icon: Globe },
   { name: "JWT Auth", category: "backend", level: 80, icon: Key },
   { name: "Zustand", category: "backend", level: 70, icon: Database },
+  
   // Languages & Tools
+  { name: "C", category: "tools", level: 85, icon: Code2 },
+  { name: "C++", category: "tools", level: 80, icon: Cpu },
   { name: "Java", category: "tools", level: 80, icon: Coffee },
   { name: "Python", category: "tools", level: 75, icon: TerminalSquare },
-  { name: "C++", category: "tools", level: 70, icon: Cpu },
   { name: "Git & GitHub", category: "tools", level: 85, icon: GitBranch },
+  { name: "Jira", category: "tools", level: 70, icon: Layout },
   { name: "VS Code", category: "tools", level: 95, icon: Terminal },
   { name: "Figma", category: "tools", level: 60, icon: Figma },
 ];
 
 const timeline: TimelineItem[] = [
   {
-    year: "2021",
-    title: "Started B.Sc. in CSE",
-    description: "Began Computer Science and Engineering at United International University, Dhaka",
+    year: "2016-2017",
+    title: "Secondary School Certificate",
+    description: "Shamsul Hoque Khan School & College | GPA: 5.00",
     type: "education",
   },
   {
-    year: "2022",
-    title: "IELTS Paradox Project",
-    description: "Built IELTS preparation application using Java and OOP principles",
-    type: "achievement",
+    year: "2018-2019",
+    title: "Higher Secondary Certificate",
+    description: "Dhaka College | GPA: 5.00",
+    type: "education",
+  },
+  {
+    year: "2021-Present",
+    title: "B.Sc. in CSE",
+    description: "United International University, Dhaka | Current CGPA: 3.84",
+    type: "education",
   },
   {
     year: "2023",
-    title: "Skill Paradox Platform",
-    description: "Contributed to full-stack skill development platform with React and Node.js",
+    title: "AOOP Lab's Project",
+    description: "1st Runner-up (Fall-2023) - Recognized for outstanding project implementation",
     type: "achievement",
   },
   {
     year: "2024",
     title: "Undergraduate Teaching Assistant",
-    description: "Started as a Teaching Assistant at United International University, helping students with programming courses",
+    description: "Selected as an Undergraduate Teaching Assistant for 4 consecutive trimesters",
     type: "work",
   },
-  {
-    year: "2024",
-    title: "Advyon Legal-Tech Platform",
-    description: "Contributed to modern legal-tech platform with React 19, Vite, and AI integration",
-    type: "achievement",
-  },
+  // {
+  //   year: "2024",
+  //   title: "Advyon Legal-Tech Platform",
+  //   description: "Contributed to modern legal-tech platform with React 19, Vite, and AI integration",
+  //   type: "achievement",
+  // },
   {
     year: "2025",
-    title: "Final Year",
-    description: "Completing final year at UIU while working as Teaching Assistant and seeking full-time opportunities",
-    type: "education",
+    title: "SAD Lab's Project",
+    description: "6th Runner-up (Summer-2025) - System Analysis and Design project competition",
+    type: "achievement",
   },
 ];
 
@@ -393,21 +405,17 @@ export default function AboutPage() {
               </h2>
               <div className="space-y-4 text-gray-400 leading-relaxed">
                 <p>
-                  Hi! I&apos;m {siteConfig.name}, a final-year Computer Science and
-                  Engineering student at United International University, Dhaka. I&apos;m
-                  currently working as an <span className="text-violet-400 font-medium">Undergraduate Teaching Assistant</span>, 
-                  helping students learn programming and software development.
+                  I&apos;ve had the chance to work as a <span className="text-violet-400 font-medium">Undergraduate Teaching Assistant</span> 3 times before, 
+                  and it&apos;s been a great experience each time. I&apos;m someone who&apos;s responsible and organized, 
+                  and I genuinely enjoy helping others understand new things.
                 </p>
                 <p>
-                  My journey in programming started in 2021, and since then, I&apos;ve
-                  worked on various projects including the <span className="text-cyan-400">Advyon legal-tech platform</span>, 
-                  <span className="text-cyan-400"> Skill Paradox learning platform</span>, and 
-                  <span className="text-cyan-400"> IELTS Paradox</span> exam preparation app.
+                  Being able to <span className="text-cyan-400">support students</span> and be part of their learning process 
+                  is something I find really fulfilling, so I&apos;m excited for the opportunity to do it again.
                 </p>
                 <p>
-                  I specialize in React, Vite, Node.js, and have strong foundations in 
-                  Java, C++, and Python. I&apos;m passionate about building user-friendly 
-                  web applications and contributing to team projects.
+                  Beyond teaching, I&apos;ve built projects like the <span className="text-cyan-400">Advyon legal-tech platform</span>, 
+                  and participated in multiple project competitions like AOOP and SAD Labs.
                 </p>
               </div>
 
@@ -551,16 +559,20 @@ export default function AboutPage() {
                   'Tailwind CSS': '#38B2AC',
                   'HTML/CSS': '#E34F26',
                   'Framer Motion': '#E10098',
+                  'JavaFX': '#007396',
                   'Node.js': '#339933',
                   'Express.js': '#000000',
                   'MongoDB': '#47A248',
+                  'MySQL Server': '#4479A1',
                   'REST APIs': '#0096FF',
                   'JWT Auth': '#D63AFF',
                   'Zustand': '#443E38',
                   'Java': '#ED8B00',
                   'Python': '#3776AB',
+                  'C': '#A8B9CC',
                   'C++': '#00599C',
                   'Git & GitHub': '#F05032',
+                  'Jira': '#0052CC',
                   'VS Code': '#007ACC',
                   'Figma': '#F24E1E',
                 };
