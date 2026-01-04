@@ -465,7 +465,7 @@ export default function ProjectsPage() {
                   transition={{ delay: i * 0.1 }}
                   whileHover={{ scale: 1.05, y: -2 }}
                   whileTap={{ scale: 0.95 }}
-                  className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all ${
+                  className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all cursor-pointer ${
                     isActive
                       ? "bg-violet-500/20 border border-violet-500/50 text-violet-300"
                       : "bg-white/5 border border-white/10 text-gray-400 hover:text-white hover:bg-white/10"
