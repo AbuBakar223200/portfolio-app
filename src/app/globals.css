@@ -166,6 +166,13 @@
     @apply border-border outline-ring/50;
   }
   
+  button,
+  [type='button'],
+  [type='reset'],
+  [type='submit'] {
+    cursor: pointer;
+  }
+  
   html {
     scroll-behavior: smooth;
   }

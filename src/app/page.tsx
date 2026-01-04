@@ -227,7 +227,7 @@ export default function HomePage() {
                     ],
                   }}
                   transition={{ duration: 2, repeat: Infinity }}
-                  className="inline-block"
+                  className="inline-block rounded-2xl"
                 >
                   <GlassCard
                     variant="glow"
@@ -308,7 +308,7 @@ export default function HomePage() {
                 className="flex flex-wrap gap-4"
               >
                 <Link href="/projects">
-                  <motion.button
+                  <motion.div
                     whileHover={{ 
                       scale: 1.05,
                       boxShadow: "0 0 30px rgba(139, 92, 246, 0.5)",
@@ -326,17 +326,17 @@ export default function HomePage() {
                       size={18}
                       className="group-hover:translate-x-1 transition-transform"
                     />
-                  </motion.button>
+                  </motion.div>
                 </Link>
                 <Link href="/cv.pdf" target="_blank">
-                  <motion.button
+                  <motion.div
                     whileHover={{ scale: 1.05, borderColor: "rgba(139, 92, 246, 0.5)" }}
                     whileTap={{ scale: 0.95 }}
                     className="px-6 py-3 rounded-xl font-medium border border-white/20 bg-white/5 hover:bg-white/10 transition-all flex items-center gap-2"
                   >
                     <Download size={18} />
                     Download CV
-                  </motion.button>
+                  </motion.div>
                 </Link>
               </motion.div>
             </div>
@@ -496,6 +496,7 @@ export default function HomePage() {
                     ],
                   }}
                   transition={{ duration: 2, repeat: Infinity }}
+                  className="rounded-2xl"
                 >
                   <GlassCard className="px-3 py-1.5 text-xs font-medium text-cyan-400 border-cyan-500/30">
                     TypeScript
@@ -522,6 +523,7 @@ export default function HomePage() {
                     ],
                   }}
                   transition={{ duration: 2, repeat: Infinity }}
+                  className="rounded-2xl"
                 >
                   <GlassCard className="px-3 py-1.5 text-xs font-medium text-violet-400 border-violet-500/30">
                     Full-Stack
