@@ -1,0 +1,84 @@
+[
+  {
+    "id": "1",
+    "title": "Advyon - Legal Tech Platform",
+    "description": "Modern legal-tech platform delivering case management, document workflows, community discussions, and integrated AI assistance.",
+    "longDescription": "A comprehensive legal-tech solution built with React 19, Vite, and Tailwind CSS. Features include case management, document workflows, community discussions, and AI-powered assistance. Uses Zustand for state management and TanStack Query for data fetching.",
+    "techStack": ["React 19", "Vite", "Tailwind CSS", "Zustand", "TanStack Query", "React Router v7"],
+    "githubUrl": "https://github.com/AbuBakar223200/advyon-client",
+    "featured": true,
+    "category": "web"
+  },
+  {
+    "id": "2",
+    "title": "Advyon Server",
+    "description": "Backend API service for the Advyon legal-tech platform with authentication, case management, and document handling.",
+    "techStack": ["Node.js", "Express", "MongoDB", "JWT"],
+    "githubUrl": "https://github.com/AbuBakar223200/advyon-server",
+    "featured": false,
+    "category": "backend"
+  },
+  {
+    "id": "3",
+    "title": "Skill Paradox",
+    "description": "A skill development and learning platform with frontend and backend components for educational content delivery.",
+    "techStack": ["React", "Vite", "Tailwind CSS", "Node.js"],
+    "githubUrl": "https://github.com/AbuBakar223200/skill-paradox-frontend",
+    "featured": true,
+    "category": "web"
+  },
+  {
+    "id": "4",
+    "title": "Skill Paradox Backend",
+    "description": "RESTful API backend for the Skill Paradox learning platform with user management and content delivery.",
+    "techStack": ["Node.js", "Express", "MongoDB"],
+    "githubUrl": "https://github.com/AbuBakar223200/skill-paradox-backend",
+    "featured": false,
+    "category": "backend"
+  },
+  {
+    "id": "5",
+    "title": "IELTS Paradox",
+    "description": "An IELTS preparation application built with Java, featuring practice tests and learning modules using OOP principles.",
+    "techStack": ["Java", "JavaFX", "CSS", "OOP"],
+    "githubUrl": "https://github.com/AbuBakar223200/IELTS_Paradox-AOOP-",
+    "featured": true,
+    "category": "web"
+  },
+  {
+    "id": "6",
+    "title": "IELTS Paradox (Web)",
+    "description": "Web version of the IELTS exam preparation platform with enhanced features and accessibility.",
+    "techStack": ["Java", "JavaFX"],
+    "githubUrl": "https://github.com/AbuBakar223200/ielts-paradox",
+    "featured": false,
+    "category": "web"
+  },
+  {
+    "id": "7",
+    "title": "Tic Tac Toe Game",
+    "description": "A classic Tic Tac Toe game implementation with a clean UI and game logic.",
+    "techStack": ["JavaScript", "HTML", "CSS"],
+    "githubUrl": "https://github.com/AbuBakar223200/tic-tac-toe-game",
+    "featured": false,
+    "category": "web"
+  },
+  {
+    "id": "8",
+    "title": "C++ Code",
+    "description": "Collection of C++ programs demonstrating data structures, algorithms, and problem-solving techniques.",
+    "techStack": ["C++", "Data Structures", "Algorithms"],
+    "githubUrl": "https://github.com/AbuBakar223200/CPP",
+    "featured": false,
+    "category": "codes"
+  },
+  {
+    "id": "9",
+    "title": "Python Code",
+    "description": "Various Python scripts showcasing automation, scripting, and programming fundamentals.",
+    "techStack": ["Python"],
+    "githubUrl": "https://github.com/AbuBakar223200/Python",
+    "featured": false,
+    "category": "codes"
+  }
+]
