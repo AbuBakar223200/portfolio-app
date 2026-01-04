@@ -1,14 +1,11 @@
 import { NextRequest, NextResponse } from "next/server";
-import fs from "fs/promises";
-import path from "path";
+import nodemailer from "nodemailer";
 
 interface ContactMessage {
-  id: string;
   name: string;
   email: string;
   subject?: string;
   message: string;
-  timestamp: string;
 }
 
 // Simple email validation
@@ -44,35 +41,42 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Create contact message object
-    const contactMessage: ContactMessage = {
-      id: Date.now().toString(),
-      name: name.trim(),
-      email: email.trim().toLowerCase(),
-      subject: subject?.trim() || undefined,
-      message: message.trim(),
-      timestamp: new Date().toISOString(),
+    // Configure Nodemailer Transporter
+    const transporter = nodemailer.createTransport({
+      service: "gmail",
+      auth: {
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS,
+      },
+    });
+
+    const mailOptions = {
+      from: process.env.EMAIL_USER,
+      to: process.env.EMAIL_TO || process.env.EMAIL_USER, // Send to self if EMAIL_TO not set
+      replyTo: email,
+      subject: `Portfolio Contact: ${subject || "New Message"}`,
+      text: `
+Name: ${name}
+Email: ${email}
+Subject: ${subject || "N/A"}
+
+Message:
+${message}
+      `,
+      html: `
+        <h3>New Contact Message</h3>
+        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Subject:</strong> ${subject || "N/A"}</p>
+        <br/>
+        <p><strong>Message:</strong></p>
+        <p>${message.replace(/\n/g, "<br>")}</p>
+      `,
     };
 
-    // Log to console (for development)
-    console.log("📧 New contact message received:");
-    console.log(JSON.stringify(contactMessage, null, 2));
-
-    // Save to file (simple storage for now)
-    const dataDir = path.join(process.cwd(), "src", "data");
-    const messagesPath = path.join(dataDir, "messages.json");
-
-    let messages: ContactMessage[] = [];
-    try {
-      const existingData = await fs.readFile(messagesPath, "utf-8");
-      messages = JSON.parse(existingData);
-    } catch {
-      // File doesn't exist yet, start with empty array
-    }
-
-    messages.push(contactMessage);
-
-    await fs.writeFile(messagesPath, JSON.stringify(messages, null, 2));
+    // Send Email
+    await transporter.sendMail(mailOptions);
+    console.log("Details:", mailOptions);
 
     return NextResponse.json({
       success: true,
