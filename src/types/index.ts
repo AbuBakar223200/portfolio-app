@@ -15,7 +15,7 @@ export interface Skill {
   name: string;
   category: "frontend" | "backend" | "tools" | "other";
   level: number; // 1-100
-  icon?: string;
+  icon?: any;
 }
 
 export interface ContactFormData {

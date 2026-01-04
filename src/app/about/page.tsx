@@ -1,7 +1,12 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { MapPin, GraduationCap, Briefcase, Award, User } from "lucide-react";
+import { motion, useMotionValue, useSpring } from "framer-motion";
+import { 
+  MapPin, GraduationCap, Briefcase, Award, User,
+  Code2, Server, Database, Globe, Terminal, Cpu,
+  Layout, Box, Layers, GitBranch, TerminalSquare, Figma,
+  Zap, Key, Coffee
+} from "lucide-react";
 import { GlassCard } from "@/components/ui/glass-card";
 import { SectionWrapper } from "@/components/ui/section-wrapper";
 import { siteConfig } from "@/config/site";
@@ -9,26 +14,26 @@ import type { Skill, TimelineItem } from "@/types";
 
 const skills: Skill[] = [
   // Frontend
-  { name: "React", category: "frontend", level: 85 },
-  { name: "Vite", category: "frontend", level: 80 },
-  { name: "JavaScript", category: "frontend", level: 90 },
-  { name: "Tailwind CSS", category: "frontend", level: 85 },
-  { name: "HTML/CSS", category: "frontend", level: 95 },
-  { name: "Framer Motion", category: "frontend", level: 70 },
+  { name: "React", category: "frontend", level: 90, icon: Code2 },
+  { name: "Vite", category: "frontend", level: 85, icon: Zap },
+  { name: "JavaScript", category: "frontend", level: 90, icon: Terminal },
+  { name: "Tailwind CSS", category: "frontend", level: 95, icon: Layout },
+  { name: "HTML/CSS", category: "frontend", level: 95, icon: Globe },
+  { name: "Framer Motion", category: "frontend", level: 75, icon: Layers },
   // Backend
-  { name: "Node.js", category: "backend", level: 80 },
-  { name: "Express.js", category: "backend", level: 75 },
-  { name: "MongoDB", category: "backend", level: 70 },
-  { name: "REST APIs", category: "backend", level: 80 },
-  { name: "JWT Auth", category: "backend", level: 75 },
-  { name: "Zustand", category: "backend", level: 70 },
+  { name: "Node.js", category: "backend", level: 80, icon: Server },
+  { name: "Express.js", category: "backend", level: 80, icon: Box },
+  { name: "MongoDB", category: "backend", level: 75, icon: Database },
+  { name: "REST APIs", category: "backend", level: 85, icon: Globe },
+  { name: "JWT Auth", category: "backend", level: 80, icon: Key },
+  { name: "Zustand", category: "backend", level: 70, icon: Database },
   // Languages & Tools
-  { name: "Java", category: "tools", level: 85 },
-  { name: "Python", category: "tools", level: 75 },
-  { name: "C++", category: "tools", level: 80 },
-  { name: "Git & GitHub", category: "tools", level: 85 },
-  { name: "VS Code", category: "tools", level: 90 },
-  { name: "Figma", category: "tools", level: 65 },
+  { name: "Java", category: "tools", level: 80, icon: Coffee },
+  { name: "Python", category: "tools", level: 75, icon: TerminalSquare },
+  { name: "C++", category: "tools", level: 70, icon: Cpu },
+  { name: "Git & GitHub", category: "tools", level: 85, icon: GitBranch },
+  { name: "VS Code", category: "tools", level: 95, icon: Terminal },
+  { name: "Figma", category: "tools", level: 60, icon: Figma },
 ];
 
 const timeline: TimelineItem[] = [
@@ -81,6 +86,46 @@ const timelineIcons = {
   work: Briefcase,
   achievement: Award,
 };
+
+// Helper to get skill label
+function getSkillLabel(level: number) {
+  if (level >= 90) return "Expert";
+  if (level >= 80) return "Advanced";
+  if (level >= 60) return "Intermediate";
+  return "Familiar";
+}
+
+// Holographic card effect
+function HolographicCard({ children, className }: { children: React.ReactNode; className?: string }) {
+  const x = useMotionValue(0);
+  const y = useMotionValue(0);
+  const rotateX = useSpring(0, { stiffness: 300, damping: 30 });
+  const rotateY = useSpring(0, { stiffness: 300, damping: 30 });
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    const centerX = rect.left + rect.width / 2;
+    const centerY = rect.top + rect.height / 2;
+    rotateX.set((e.clientY - centerY) / 20);
+    rotateY.set((centerX - e.clientX) / 20);
+  };
+
+  const handleMouseLeave = () => {
+    rotateX.set(0);
+    rotateY.set(0);
+  };
+
+  return (
+    <motion.div
+      style={{ x, y, rotateX, rotateY, transformPerspective: 1000 }}
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+      className={className}
+    >
+      {children}
+    </motion.div>
+  );
+}
 
 // UNIQUE - DNA Helix Animation (bio/personal theme)
 function DNAHelix() {
@@ -494,65 +539,83 @@ export default function AboutPage() {
             <p className="text-gray-400">Technologies I work with regularly</p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {(["frontend", "backend", "tools"] as const).map((category, catIndex) => (
-              <motion.div
-                key={category}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: false }}
-                transition={{ duration: 0.5, delay: catIndex * 0.1 }}
-                whileHover={{ y: -5 }}
-              >
-                <GlassCard className="p-6 h-full relative overflow-hidden">
-                  {/* Neural node decoration */}
-                  <motion.div
-                    className="absolute top-2 right-2 w-2 h-2 rounded-full bg-violet-500/40"
-                    animate={{ scale: [1, 1.5, 1], opacity: [0.4, 0.8, 0.4] }}
-                    transition={{ duration: 2, repeat: Infinity, delay: catIndex * 0.3 }}
-                  />
-                  
-                  <h3 className="text-lg font-semibold text-white mb-6">
-                    {categoryLabels[category]}
-                  </h3>
-                  <div className="space-y-4">
-                    {skills
-                      .filter((skill) => skill.category === category)
-                      .map((skill, index) => (
-                        <motion.div
-                          key={skill.name}
-                          initial={{ opacity: 0, x: -20 }}
-                          whileInView={{ opacity: 1, x: 0 }}
-                          viewport={{ once: false }}
-                          transition={{ delay: index * 0.05 }}
-                        >
-                          <div className="flex justify-between items-center mb-1">
-                            <span className="text-sm text-gray-300">
-                              {skill.name}
-                            </span>
-                            <span className="text-xs text-gray-500">
-                              {skill.level}%
-                            </span>
-                          </div>
-                          <div className="h-1.5 bg-white/5 rounded-full overflow-hidden">
-                            <motion.div
-                              className="h-full bg-gradient-to-r from-violet-500 to-cyan-500 rounded-full"
-                              initial={{ width: 0 }}
-                              whileInView={{ width: `${skill.level}%` }}
-                              viewport={{ once: false }}
-                              transition={{
-                                duration: 1,
-                                delay: index * 0.05,
-                                ease: "easeOut",
-                              }}
-                            />
-                          </div>
-                        </motion.div>
-                      ))}
-                  </div>
-                </GlassCard>
-              </motion.div>
-            ))}
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
+            {skills.map((skill, index) => {
+              const Icon = skill.icon;
+              // Define brand colors
+              const getColor = (name: string) => {
+                const colors: Record<string, string> = {
+                  'React': '#61DAFB',
+                  'Vite': '#646CFF',
+                  'JavaScript': '#F7DF1E',
+                  'Tailwind CSS': '#38B2AC',
+                  'HTML/CSS': '#E34F26',
+                  'Framer Motion': '#E10098',
+                  'Node.js': '#339933',
+                  'Express.js': '#000000',
+                  'MongoDB': '#47A248',
+                  'REST APIs': '#0096FF',
+                  'JWT Auth': '#D63AFF',
+                  'Zustand': '#443E38',
+                  'Java': '#ED8B00',
+                  'Python': '#3776AB',
+                  'C++': '#00599C',
+                  'Git & GitHub': '#F05032',
+                  'VS Code': '#007ACC',
+                  'Figma': '#F24E1E',
+                };
+                return colors[name] || '#8b5cf6';
+              };
+
+              const color = getColor(skill.name);
+              
+              return (
+                <motion.div
+                  key={skill.name}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: false }}
+                  transition={{ delay: index * 0.05 }}
+                  whileHover={{ y: -10 }}
+                  className="group"
+                >
+                  <GlassCard className="p-6 flex flex-col items-center justify-center gap-4 text-center h-40 relative overflow-hidden bg-zinc-900/50 hover:bg-zinc-800/80 transition-colors border-zinc-800">
+                     {/* Glow effect on hover */}
+                    <div 
+                      className="absolute inset-0 opacity-0 group-hover:opacity-20 transition-opacity duration-500"
+                      style={{ background: `radial-gradient(circle at center, ${color}, transparent 70%)` }}
+                    />
+
+                    {/* Side Glow Border */}
+                    <div 
+                      className="absolute inset-0 rounded-xl border opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+                      style={{ 
+                        borderColor: color,
+                        boxShadow: `0 0 20px ${color}40, inset 0 0 10px ${color}20` 
+                      }}
+                    />
+                    
+                    <div 
+                      className="p-3 rounded-xl bg-zinc-950/50 relative z-10 transition-transform duration-300 group-hover:scale-110"
+                      style={{ boxShadow: `0 0 20px ${color}15` }}
+                    >
+                      <Icon size={40} style={{ color: color }} />
+                    </div>
+                    
+                    <h3 className="font-medium text-gray-300 group-hover:text-white transition-colors relative z-10">
+                      {skill.name}
+                    </h3>
+
+                    {/* Level Badge (Optional, small) */}
+                    <div className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                       <span className="text-[10px] px-2 py-0.5 rounded-full bg-white/10 text-gray-400 font-mono">
+                         {getSkillLabel(skill.level)}
+                       </span>
+                    </div>
+                  </GlassCard>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </SectionWrapper>
