@@ -213,37 +213,7 @@ export default function HomePage() {
             {/* Text Content */}
             <div className="space-y-8 relative z-10">
               {/* Badge with pulse */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-              >
-                <motion.div
-                  animate={{
-                    boxShadow: [
-                      "0 0 20px rgba(34, 197, 94, 0.3)",
-                      "0 0 40px rgba(34, 197, 94, 0.5)",
-                      "0 0 20px rgba(34, 197, 94, 0.3)",
-                    ],
-                  }}
-                  transition={{ duration: 2, repeat: Infinity }}
-                  className="inline-block rounded-2xl"
-                >
-                  <GlassCard
-                    variant="glow"
-                    className="inline-flex items-center gap-2 px-4 py-2"
-                  >
-                    <motion.span
-                      className="w-2 h-2 rounded-full bg-green-500"
-                      animate={{ scale: [1, 1.5, 1], opacity: [1, 0.5, 1] }}
-                      transition={{ duration: 1, repeat: Infinity }}
-                    />
-                    <span className="text-sm text-gray-300">
-                      Open to Internships & Remote Work
-                    </span>
-                  </GlassCard>
-                </motion.div>
-              </motion.div>
+
 
               {/* Heading with glitch */}
               <div className="space-y-4">
