@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Github, Linkedin, Facebook, Mail, Heart } from "lucide-react";
+import { Github, Linkedin, Facebook, Mail, Heart, Phone } from "lucide-react";
 import { siteConfig } from "@/config/site";
 
 const quickLinks = [
@@ -17,6 +17,7 @@ const socialLinks = [
   { href: siteConfig.socials.linkedin, icon: Linkedin, label: "LinkedIn" },
   { href: siteConfig.socials.facebook || "#", icon: Facebook, label: "Facebook" },
   { href: `mailto:${siteConfig.email}`, icon: Mail, label: "Email" },
+  { href: `tel:${siteConfig.mobile}`, icon: Phone, label: "Phone" },
 ];
 
 export function Footer() {
@@ -80,8 +81,8 @@ export function Footer() {
                 <motion.a
                   key={social.label}
                   href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  target={social.href.startsWith("mailto:") || social.href.startsWith("tel:") || social.href.startsWith("/") ? undefined : "_blank"}
+                  rel={social.href.startsWith("mailto:") || social.href.startsWith("tel:") || social.href.startsWith("/") ? undefined : "noopener noreferrer"}
                   whileHover={{ scale: 1.1, y: -2 }}
                   whileTap={{ scale: 0.9 }}
                   className="p-2 rounded-lg bg-white/5 border border-white/10 text-gray-400 hover:text-white hover:border-violet-500/50 hover:bg-violet-500/10 transition-all duration-300"

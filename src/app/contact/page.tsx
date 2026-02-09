@@ -15,6 +15,7 @@ import {
   Sparkles,
   Zap,
   MessageCircle,
+  Phone,
 } from "lucide-react";
 import { GlassCard } from "@/components/ui/glass-card";
 import { SectionWrapper } from "@/components/ui/section-wrapper";
@@ -505,6 +506,16 @@ export default function ContactPage() {
                       <Mail size={18} />
                     </div>
                     <span className="text-sm">{siteConfig.email}</span>
+                  </motion.a>
+                  <motion.a
+                    href={`tel:${siteConfig.mobile}`}
+                    className="flex items-center gap-3 text-gray-400 hover:text-white transition-colors group"
+                    whileHover={{ x: 5 }}
+                  >
+                    <div className="p-2 rounded-lg bg-emerald-500/10 text-emerald-400 group-hover:bg-emerald-500/20 transition-colors">
+                      <Phone size={18} />
+                    </div>
+                    <span className="text-sm">{siteConfig.mobile}</span>
                   </motion.a>
                   <motion.div
                     className="flex items-center gap-3 text-gray-400"

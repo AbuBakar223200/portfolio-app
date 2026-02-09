@@ -3,6 +3,7 @@ export interface SiteConfig {
   role: string;
   location: string;
   email: string;
+  mobile: string;
   description: string;
   socials: {
     github: string;
@@ -21,6 +22,7 @@ export const siteConfig: SiteConfig = {
   role: "CSE Student • Teaching Assistant • Full-Stack Developer",
   location: "Mouchak, Siddhirgonj, Narayanganj",
   email: "abubakarmunshi786@gmail.com",
+  mobile: "+8801521703968",
   description:
     "Passionate about building modern web applications with cutting-edge technologies. I specialize in React, Next.js, and Node.js, with experience in legal-tech and educational platforms. Currently seeking opportunities to contribute to innovative projects.",
   socials: {
