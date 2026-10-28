@@ -47,7 +47,7 @@ function FloatingParticles() {
       {[...Array(6)].map((_, i) => (
         <motion.div
           key={i}
-          className="absolute w-2 h-2 rounded-full bg-violet-500/30"
+          className="absolute w-2 h-2 rounded-full bg-[#590907]/30"
           style={{
             left: `${15 + i * 15}%`,
             top: `${20 + (i % 3) * 30}%`,
@@ -68,8 +68,8 @@ function FloatingParticles() {
       ))}
       {[...Array(4)].map((_, i) => (
         <motion.div
-          key={`cyan-${i}`}
-          className="absolute w-1.5 h-1.5 rounded-full bg-cyan-500/40"
+          key={`sage-${i}`}
+          className="absolute w-1.5 h-1.5 rounded-full bg-[#A5A79B]/40"
           style={{
             right: `${10 + i * 20}%`,
             bottom: `${15 + i * 20}%`,
@@ -95,7 +95,7 @@ function FloatingParticles() {
 function AnimatedRing({ className }: { className?: string }) {
   return (
     <motion.div
-      className={`absolute rounded-full border border-violet-500/20 ${className}`}
+      className={`absolute rounded-full border border-[#590907]/20 ${className}`}
       animate={{
         scale: [1, 1.1, 1],
         opacity: [0.2, 0.4, 0.2],
@@ -196,7 +196,7 @@ export default function ContactPage() {
       
       {/* Glowing orbs */}
       <motion.div
-        className="absolute top-20 left-10 w-32 h-32 rounded-full bg-violet-500/10 blur-3xl"
+        className="absolute top-20 left-10 w-32 h-32 rounded-full bg-[#590907]/10 blur-3xl"
         animate={{
           scale: [1, 1.3, 1],
           opacity: [0.3, 0.6, 0.3],
@@ -204,7 +204,7 @@ export default function ContactPage() {
         transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
       />
       <motion.div
-        className="absolute bottom-20 right-10 w-40 h-40 rounded-full bg-cyan-500/10 blur-3xl"
+        className="absolute bottom-20 right-10 w-40 h-40 rounded-full bg-[#A5A79B]/10 blur-3xl"
         animate={{
           scale: [1.2, 1, 1.2],
           opacity: [0.4, 0.2, 0.4],
@@ -223,12 +223,12 @@ export default function ContactPage() {
           >
             {/* Animated icon */}
             <motion.div
-              className="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br from-violet-500/20 to-cyan-500/20 border border-violet-500/30 mb-6"
+              className="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br from-[#590907]/20 to-[#A5A79B]/20 border border-[#590907]/30 mb-6"
               animate={{
                 boxShadow: [
-                  "0 0 20px rgba(139, 92, 246, 0.3)",
-                  "0 0 40px rgba(139, 92, 246, 0.5)",
-                  "0 0 20px rgba(139, 92, 246, 0.3)",
+                  "0 0 20px rgba(89, 9, 7, 0.3)",
+                  "0 0 40px rgba(89, 9, 7, 0.5)",
+                  "0 0 20px rgba(89, 9, 7, 0.3)",
                 ],
               }}
               transition={{ duration: 2, repeat: Infinity }}
@@ -237,7 +237,7 @@ export default function ContactPage() {
                 animate={{ rotate: [0, 10, -10, 0] }}
                 transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
               >
-                <MessageCircle size={36} className="text-violet-400" />
+                <MessageCircle size={36} className="text-[#a04040]" />
               </motion.div>
             </motion.div>
 
@@ -252,7 +252,7 @@ export default function ContactPage() {
 
             {/* Animated line */}
             <motion.div
-              className="mt-8 h-px w-32 mx-auto bg-gradient-to-r from-transparent via-violet-500 to-transparent"
+              className="mt-8 h-px w-32 mx-auto bg-gradient-to-r from-transparent via-[#590907] to-transparent"
               animate={{ scaleX: [0.5, 1, 0.5], opacity: [0.5, 1, 0.5] }}
               transition={{ duration: 2, repeat: Infinity }}
             />
@@ -275,7 +275,7 @@ export default function ContactPage() {
               <GlassCard className="p-8 relative overflow-hidden">
                 {/* Form glow effect */}
                 <motion.div
-                  className="absolute -top-20 -right-20 w-40 h-40 rounded-full bg-violet-500/20 blur-3xl"
+                  className="absolute -top-20 -right-20 w-40 h-40 rounded-full bg-[#590907]/20 blur-3xl"
                   animate={{
                     scale: [1, 1.2, 1],
                     opacity: [0.3, 0.5, 0.3],
@@ -288,7 +288,7 @@ export default function ContactPage() {
                     animate={{ rotate: [0, 360] }}
                     transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
                   >
-                    <Sparkles className="text-violet-400" size={24} />
+                    <Sparkles className="text-[#a04040]" size={24} />
                   </motion.div>
                   <h2 className="text-2xl font-bold text-white">
                     Send a Message
@@ -317,8 +317,8 @@ export default function ContactPage() {
                         className={`w-full px-4 py-3 rounded-lg bg-white/5 border ${
                           errors.name
                             ? "border-red-500/50"
-                            : "border-white/10 focus:border-violet-500/50"
-                        } text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-violet-500/20 transition-all`}
+                            : "border-white/10 focus:border-[#590907]/50"
+                        } text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#590907]/20 transition-all`}
                         placeholder="Your name"
                       />
                       {errors.name && (
@@ -351,8 +351,8 @@ export default function ContactPage() {
                         className={`w-full px-4 py-3 rounded-lg bg-white/5 border ${
                           errors.email
                             ? "border-red-500/50"
-                            : "border-white/10 focus:border-violet-500/50"
-                        } text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-violet-500/20 transition-all`}
+                            : "border-white/10 focus:border-[#590907]/50"
+                        } text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#590907]/20 transition-all`}
                         placeholder="your@email.com"
                       />
                       {errors.email && (
@@ -381,7 +381,7 @@ export default function ContactPage() {
                       name="subject"
                       value={formData.subject}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-violet-500/20 focus:border-violet-500/50 transition-all"
+                      className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#590907]/20 focus:border-[#590907]/50 transition-all"
                       placeholder="What's this about?"
                     />
                   </div>
@@ -403,8 +403,8 @@ export default function ContactPage() {
                       className={`w-full px-4 py-3 rounded-lg bg-white/5 border ${
                         errors.message
                           ? "border-red-500/50"
-                          : "border-white/10 focus:border-violet-500/50"
-                      } text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-violet-500/20 transition-all resize-none`}
+                          : "border-white/10 focus:border-[#590907]/50"
+                      } text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#590907]/20 transition-all resize-none`}
                       placeholder="Tell me about your project or idea..."
                     />
                     {errors.message && (
@@ -422,7 +422,7 @@ export default function ContactPage() {
                   <motion.button
                     type="submit"
                     disabled={isSubmitting}
-                    whileHover={{ scale: isSubmitting ? 1 : 1.02, boxShadow: "0 0 30px rgba(139, 92, 246, 0.4)" }}
+                    whileHover={{ scale: isSubmitting ? 1 : 1.02, boxShadow: "0 0 30px rgba(89, 9, 7, 0.4)" }}
                     whileTap={{ scale: isSubmitting ? 1 : 0.98 }}
                     className="w-full glow-button px-6 py-4 rounded-xl font-medium text-white flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed relative overflow-hidden group"
                   >
@@ -483,7 +483,7 @@ export default function ContactPage() {
               {/* Contact Details */}
               <GlassCard className="p-6 relative overflow-hidden">
                 <motion.div
-                  className="absolute -bottom-10 -right-10 w-32 h-32 rounded-full bg-cyan-500/10 blur-2xl"
+                  className="absolute -bottom-10 -right-10 w-32 h-32 rounded-full bg-[#A5A79B]/10 blur-2xl"
                   animate={{ scale: [1, 1.3, 1] }}
                   transition={{ duration: 4, repeat: Infinity }}
                 />
@@ -492,7 +492,7 @@ export default function ContactPage() {
                     animate={{ y: [0, -3, 0] }}
                     transition={{ duration: 1.5, repeat: Infinity }}
                   >
-                    <Mail size={18} className="text-violet-400" />
+                    <Mail size={18} className="text-[#a04040]" />
                   </motion.div>
                   Contact Information
                 </h3>
@@ -502,7 +502,7 @@ export default function ContactPage() {
                     className="flex items-center gap-3 text-gray-400 hover:text-white transition-colors group"
                     whileHover={{ x: 5 }}
                   >
-                    <div className="p-2 rounded-lg bg-violet-500/10 text-violet-400 group-hover:bg-violet-500/20 transition-colors">
+                    <div className="p-2 rounded-lg bg-[#590907]/10 text-[#a04040] group-hover:bg-[#590907]/20 transition-colors">
                       <Mail size={18} />
                     </div>
                     <span className="text-sm">{siteConfig.email}</span>
@@ -521,7 +521,7 @@ export default function ContactPage() {
                     className="flex items-center gap-3 text-gray-400"
                     whileHover={{ x: 5 }}
                   >
-                    <div className="p-2 rounded-lg bg-cyan-500/10 text-cyan-400">
+                    <div className="p-2 rounded-lg bg-[#A5A79B]/10 text-[#A5A79B]">
                       <MapPin size={18} />
                     </div>
                     <span className="text-sm">{siteConfig.location}</span>
@@ -547,10 +547,10 @@ export default function ContactPage() {
                       whileHover={{ 
                         scale: 1.15, 
                         y: -5,
-                        boxShadow: "0 10px 30px rgba(139, 92, 246, 0.3)"
+                        boxShadow: "0 10px 30px rgba(89, 9, 7, 0.3)"
                       }}
                       whileTap={{ scale: 0.9 }}
-                      className="p-3 rounded-lg bg-white/5 border border-white/10 text-gray-400 hover:text-white hover:border-violet-500/50 hover:bg-violet-500/10 transition-all"
+                      className="p-3 rounded-lg bg-white/5 border border-white/10 text-gray-400 hover:text-white hover:border-[#590907]/50 hover:bg-[#590907]/10 transition-all"
                       aria-label={social.label}
                     >
                       <social.icon size={20} />
@@ -562,7 +562,7 @@ export default function ContactPage() {
               {/* Quick Response Card */}
               <GlassCard className="p-6 relative overflow-hidden" variant="glow">
                 <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-violet-500/5 to-cyan-500/5"
+                  className="absolute inset-0 bg-gradient-to-r from-[#590907]/5 to-[#A5A79B]/5"
                   animate={{
                     opacity: [0.5, 1, 0.5],
                   }}
@@ -607,12 +607,12 @@ export default function ContactPage() {
                 className="text-center"
               >
                 <motion.div
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-violet-500/10 border border-violet-500/30 text-violet-300 text-sm"
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#590907]/10 border border-[#590907]/30 text-[#E8D2B5] text-sm"
                   animate={{
                     boxShadow: [
-                      "0 0 20px rgba(139, 92, 246, 0.2)",
-                      "0 0 40px rgba(139, 92, 246, 0.4)",
-                      "0 0 20px rgba(139, 92, 246, 0.2)",
+                      "0 0 20px rgba(89, 9, 7, 0.2)",
+                      "0 0 40px rgba(89, 9, 7, 0.4)",
+                      "0 0 20px rgba(89, 9, 7, 0.2)",
                     ],
                   }}
                   transition={{ duration: 2, repeat: Infinity }}

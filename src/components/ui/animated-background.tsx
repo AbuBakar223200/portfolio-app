@@ -6,11 +6,11 @@ export function AnimatedBackground() {
   return (
     <div className="fixed inset-0 -z-10 overflow-hidden">
       {/* Base gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#0a0a0f] via-[#1a1a2e] to-[#0a0a0f]" />
+      <div className="absolute inset-0 bg-gradient-to-br from-[#0d0a08] via-[#1a1510] to-[#0d0a08]" />
       
       {/* Animated blobs */}
       <motion.div
-        className="absolute top-1/4 -left-20 w-96 h-96 rounded-full bg-violet-600/20 blur-[100px]"
+        className="absolute top-1/4 -left-20 w-96 h-96 rounded-full bg-[#590907]/20 blur-[100px]"
         animate={{
           x: [0, 50, 0],
           y: [0, 30, 0],
@@ -24,7 +24,7 @@ export function AnimatedBackground() {
       />
       
       <motion.div
-        className="absolute top-1/2 right-0 w-80 h-80 rounded-full bg-cyan-500/20 blur-[100px]"
+        className="absolute top-1/2 right-0 w-80 h-80 rounded-full bg-[#A5A79B]/20 blur-[100px]"
         animate={{
           x: [0, -40, 0],
           y: [0, -50, 0],
@@ -38,7 +38,7 @@ export function AnimatedBackground() {
       />
       
       <motion.div
-        className="absolute bottom-1/4 left-1/3 w-72 h-72 rounded-full bg-pink-600/15 blur-[100px]"
+        className="absolute bottom-1/4 left-1/3 w-72 h-72 rounded-full bg-[#E8D2B5]/15 blur-[100px]"
         animate={{
           x: [0, 30, -20, 0],
           y: [0, -30, 20, 0],
@@ -52,7 +52,7 @@ export function AnimatedBackground() {
       />
       
       <motion.div
-        className="absolute top-10 right-1/4 w-64 h-64 rounded-full bg-indigo-500/15 blur-[80px]"
+        className="absolute top-10 right-1/4 w-64 h-64 rounded-full bg-[#3d0605]/15 blur-[80px]"
         animate={{
           x: [0, -30, 30, 0],
           y: [0, 40, -20, 0],
@@ -75,7 +75,7 @@ export function AnimatedBackground() {
       />
       
       {/* Radial gradient overlay */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,#0a0a0f_70%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,#0d0a08_70%)]" />
     </div>
   );
 }

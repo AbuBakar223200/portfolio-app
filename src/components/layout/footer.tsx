@@ -27,7 +27,7 @@ export function Footer() {
     <footer className="relative mt-20 border-t border-white/10">
       {/* Gradient line */}
       <motion.div 
-        className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-violet-500 to-transparent"
+        className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#590907] to-transparent"
         initial={{ scaleX: 0 }}
         whileInView={{ scaleX: 1 }}
         transition={{ duration: 1, ease: "easeOut" }}
@@ -85,7 +85,7 @@ export function Footer() {
                   rel={social.href.startsWith("mailto:") || social.href.startsWith("tel:") || social.href.startsWith("/") ? undefined : "noopener noreferrer"}
                   whileHover={{ scale: 1.1, y: -2 }}
                   whileTap={{ scale: 0.9 }}
-                  className="p-2 rounded-lg bg-white/5 border border-white/10 text-gray-400 hover:text-white hover:border-violet-500/50 hover:bg-violet-500/10 transition-all duration-300"
+                  className="p-2 rounded-lg bg-white/5 border border-white/10 text-gray-400 hover:text-white hover:border-[#590907]/50 hover:bg-[#590907]/10 transition-all duration-300"
                   aria-label={social.label}
                 >
                   <social.icon size={18} />

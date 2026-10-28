@@ -20,8 +20,8 @@ const GlassCard = forwardRef<HTMLDivElement, GlassCardProps>(
 
     const variants = {
       default: "bg-white/5 border-white/10",
-      hover: "bg-white/5 border-white/10 hover:bg-white/10 hover:border-violet-500/30 transition-all duration-300",
-      glow: "bg-white/5 border-violet-500/30 shadow-[0_0_30px_rgba(139,92,246,0.3)]",
+      hover: "bg-white/5 border-white/10 hover:bg-white/10 hover:border-[#590907]/30 transition-all duration-300",
+      glow: "bg-white/5 border-[#590907]/30 shadow-[0_0_30px_rgba(89,9,7,0.3)]",
     };
 
     return (

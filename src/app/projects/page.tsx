@@ -22,7 +22,7 @@ function TechCircuitGrid() {
       {[...Array(5)].map((_, i) => (
         <motion.div
           key={`h-${i}`}
-          className="absolute h-px bg-gradient-to-r from-transparent via-violet-500/30 to-transparent"
+          className="absolute h-px bg-gradient-to-r from-transparent via-[#590907]/30 to-transparent"
           style={{ top: `${20 + i * 15}%`, left: 0, right: 0 }}
           animate={{ 
             opacity: [0.1, 0.4, 0.1],
@@ -40,7 +40,7 @@ function TechCircuitGrid() {
       {[...Array(4)].map((_, i) => (
         <motion.div
           key={`v-${i}`}
-          className="absolute w-px bg-gradient-to-b from-transparent via-cyan-500/20 to-transparent"
+          className="absolute w-px bg-gradient-to-b from-transparent via-[#A5A79B]/20 to-transparent"
           style={{ left: `${25 + i * 20}%`, top: 0, bottom: 0 }}
           animate={{ 
             opacity: [0.1, 0.3, 0.1],
@@ -56,7 +56,7 @@ function TechCircuitGrid() {
       {[...Array(6)].map((_, i) => (
         <motion.div
           key={`node-${i}`}
-          className="absolute w-2 h-2 rounded-full bg-violet-500/30"
+          className="absolute w-2 h-2 rounded-full bg-[#590907]/30"
           style={{
             left: `${20 + (i % 3) * 30}%`,
             top: `${25 + Math.floor(i / 3) * 40}%`,
@@ -84,7 +84,7 @@ function FloatingCodeSymbols() {
       {symbols.map((symbol, i) => (
         <motion.span
           key={i}
-          className="absolute text-xl font-mono text-violet-500/15"
+          className="absolute text-xl font-mono text-[#590907]/15"
           style={{
             left: `${8 + i * 15}%`,
             top: `${10 + (i % 3) * 30}%`,
@@ -113,14 +113,14 @@ function DataStream() {
     <>
       <div className="absolute right-0 top-0 bottom-0 w-px overflow-hidden pointer-events-none">
         <motion.div
-          className="w-full h-32 bg-gradient-to-b from-transparent via-violet-500/40 to-transparent"
+          className="w-full h-32 bg-gradient-to-b from-transparent via-[#590907]/40 to-transparent"
           animate={{ y: ["-100%", "800%"] }}
           transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
         />
       </div>
       <div className="absolute left-0 top-0 bottom-0 w-px overflow-hidden pointer-events-none">
         <motion.div
-          className="w-full h-32 bg-gradient-to-b from-transparent via-cyan-500/30 to-transparent"
+          className="w-full h-32 bg-gradient-to-b from-transparent via-[#A5A79B]/30 to-transparent"
           animate={{ y: ["800%", "-100%"] }}
           transition={{ duration: 5, repeat: Infinity, ease: "linear" }}
         />
@@ -136,7 +136,7 @@ function HexOverlay() {
       {[...Array(4)].map((_, i) => (
         <motion.div
           key={i}
-          className="absolute w-20 h-20 border border-violet-500/20"
+          className="absolute w-20 h-20 border border-[#590907]/20"
           style={{
             left: `${15 + (i % 2) * 60}%`,
             top: `${20 + Math.floor(i / 2) * 50}%`,
@@ -170,8 +170,8 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
     >
       <GlassCard variant="hover" className="h-full group overflow-hidden relative">
         {/* Tech corner brackets */}
-        <div className="absolute top-0 left-0 w-6 h-6 border-l-2 border-t-2 border-violet-500/40" />
-        <div className="absolute bottom-0 right-0 w-6 h-6 border-r-2 border-b-2 border-cyan-500/40" />
+        <div className="absolute top-0 left-0 w-6 h-6 border-l-2 border-t-2 border-[#590907]/40" />
+        <div className="absolute bottom-0 right-0 w-6 h-6 border-r-2 border-b-2 border-[#A5A79B]/40" />
 
         {project.featured && (
           <div className="absolute top-4 right-4 z-10">
@@ -182,10 +182,10 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
           </div>
         )}
 
-        <div className="h-48 bg-gradient-to-br from-violet-500/10 to-cyan-500/10 relative overflow-hidden">
+        <div className="h-48 bg-gradient-to-br from-[#590907]/10 to-[#A5A79B]/10 relative overflow-hidden">
           {/* Scan line */}
           <motion.div
-            className="absolute left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-violet-500/40 to-transparent"
+            className="absolute left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-[#590907]/40 to-transparent"
             animate={{ top: ["0%", "100%"] }}
             transition={{ duration: 2.5, repeat: Infinity, ease: "linear" }}
           />
@@ -200,7 +200,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
         </div>
 
         <div className="p-6 space-y-4">
-          <h3 className="text-xl font-bold text-white group-hover:text-violet-400 transition-colors">
+          <h3 className="text-xl font-bold text-white group-hover:text-[#a04040] transition-colors">
             {project.title}
           </h3>
           <p className="text-gray-400 text-sm line-clamp-2">
@@ -211,7 +211,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
             {project.techStack.slice(0, 4).map((tech) => (
               <span
                 key={tech}
-                className="px-2 py-1 text-xs rounded-md bg-violet-500/10 border border-violet-500/20 text-violet-300"
+                className="px-2 py-1 text-xs rounded-md bg-[#590907]/10 border border-[#590907]/20 text-[#E8D2B5]"
               >
                 {tech}
               </span>
@@ -239,7 +239,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
                 href={project.liveUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 text-sm text-gray-400 hover:text-cyan-400 transition-colors"
+                className="flex items-center gap-2 text-sm text-gray-400 hover:text-[#A5A79B] transition-colors"
                 whileHover={{ x: 3 }}
               >
                 <ExternalLink size={16} />
@@ -263,14 +263,14 @@ function FeaturedProjectCard({ project }: { project: Project }) {
     >
       <GlassCard className="overflow-hidden relative" variant="glow">
         {/* Tech corners */}
-        <div className="absolute top-0 left-0 w-12 h-12 border-l-2 border-t-2 border-violet-500/50" />
-        <div className="absolute bottom-0 right-0 w-12 h-12 border-r-2 border-b-2 border-cyan-500/50" />
+        <div className="absolute top-0 left-0 w-12 h-12 border-l-2 border-t-2 border-[#590907]/50" />
+        <div className="absolute bottom-0 right-0 w-12 h-12 border-r-2 border-b-2 border-[#A5A79B]/50" />
 
         <div className="grid lg:grid-cols-2 gap-0">
-          <div className="h-64 lg:h-auto bg-gradient-to-br from-violet-500/15 to-cyan-500/15 relative overflow-hidden">
+          <div className="h-64 lg:h-auto bg-gradient-to-br from-[#590907]/15 to-[#A5A79B]/15 relative overflow-hidden">
             {/* Scan effect */}
             <motion.div
-              className="absolute left-0 right-0 h-1 bg-gradient-to-r from-transparent via-violet-500/50 to-transparent"
+              className="absolute left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#590907]/50 to-transparent"
               animate={{ top: ["0%", "100%"] }}
               transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
             />
@@ -299,7 +299,7 @@ function FeaturedProjectCard({ project }: { project: Project }) {
               {project.techStack.map((tech) => (
                 <span
                   key={tech}
-                  className="px-3 py-1.5 text-sm rounded-lg bg-violet-500/10 border border-violet-500/20 text-violet-300"
+                  className="px-3 py-1.5 text-sm rounded-lg bg-[#590907]/10 border border-[#590907]/20 text-[#E8D2B5]"
                 >
                   {tech}
                 </span>
@@ -344,7 +344,7 @@ function LoadingSpinner() {
   return (
     <div className="flex flex-col items-center justify-center py-20 gap-4">
       <motion.div
-        className="w-12 h-12 border-2 border-violet-500/30 border-t-violet-500 rounded-full"
+        className="w-12 h-12 border-2 border-[#590907]/30 border-t-[#590907] rounded-full"
         animate={{ rotate: 360 }}
         transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
       />
@@ -394,12 +394,12 @@ export default function ProjectsPage() {
       
       {/* Same violet/cyan glowing orbs as other pages */}
       <motion.div
-        className="absolute top-20 left-10 w-32 h-32 rounded-full bg-violet-500/10 blur-3xl"
+        className="absolute top-20 left-10 w-32 h-32 rounded-full bg-[#590907]/10 blur-3xl"
         animate={{ scale: [1, 1.3, 1], opacity: [0.3, 0.6, 0.3] }}
         transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
       />
       <motion.div
-        className="absolute bottom-20 right-10 w-40 h-40 rounded-full bg-cyan-500/10 blur-3xl"
+        className="absolute bottom-20 right-10 w-40 h-40 rounded-full bg-[#A5A79B]/10 blur-3xl"
         animate={{ scale: [1.2, 1, 1.2], opacity: [0.4, 0.2, 0.4] }}
         transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
       />
@@ -414,17 +414,17 @@ export default function ProjectsPage() {
             className="text-center"
           >
             <motion.div
-              className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-violet-500/20 to-cyan-500/20 border border-violet-500/30 mb-6"
+              className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-[#590907]/20 to-[#A5A79B]/20 border border-[#590907]/30 mb-6"
               animate={{
                 boxShadow: [
-                  "0 0 20px rgba(139, 92, 246, 0.3)",
-                  "0 0 40px rgba(139, 92, 246, 0.5)",
-                  "0 0 20px rgba(139, 92, 246, 0.3)",
+                  "0 0 20px rgba(89, 9, 7, 0.3)",
+                  "0 0 40px rgba(89, 9, 7, 0.5)",
+                  "0 0 20px rgba(89, 9, 7, 0.3)",
                 ],
               }}
               transition={{ duration: 2, repeat: Infinity }}
             >
-              <Code2 className="text-violet-400" size={28} />
+              <Code2 className="text-[#a04040]" size={28} />
             </motion.div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
@@ -436,7 +436,7 @@ export default function ProjectsPage() {
             </p>
 
             <motion.div
-              className="mt-8 h-px w-32 mx-auto bg-gradient-to-r from-transparent via-violet-500 to-transparent"
+              className="mt-8 h-px w-32 mx-auto bg-gradient-to-r from-transparent via-[#590907] to-transparent"
               animate={{ scaleX: [0.5, 1, 0.5], opacity: [0.5, 1, 0.5] }}
               transition={{ duration: 2, repeat: Infinity }}
             />
@@ -467,7 +467,7 @@ export default function ProjectsPage() {
                   whileTap={{ scale: 0.95 }}
                   className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all cursor-pointer ${
                     isActive
-                      ? "bg-violet-500/20 border border-violet-500/50 text-violet-300"
+                      ? "bg-[#590907]/20 border border-[#590907]/50 text-[#E8D2B5]"
                       : "bg-white/5 border border-white/10 text-gray-400 hover:text-white hover:bg-white/10"
                   }`}
                 >

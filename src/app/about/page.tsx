@@ -68,9 +68,9 @@ const timeline: TimelineItem[] = [
     type: "achievement",
   },
   {
-    year: "2024",
+    year: "2024-Present",
     title: "Undergraduate Teaching Assistant",
-    description: "Selected as an Undergraduate Teaching Assistant for 4 consecutive trimesters",
+    description: "Selected as an Undergraduate Teaching Assistant for 6 consecutive trimesters",
     type: "work",
   },
   // {
@@ -83,6 +83,12 @@ const timeline: TimelineItem[] = [
     year: "2025",
     title: "SAD Lab's Project",
     description: "6th Runner-up (Summer-2025) - System Analysis and Design project competition",
+    type: "achievement",
+  },
+  {
+    year: "2025",
+    title: "Software Engineering Lab's Project",
+    description: "Champion (Fall-2025) - CSE Project Show competition",
     type: "achievement",
   },
 ];
@@ -146,7 +152,7 @@ function DNAHelix() {
       {[...Array(12)].map((_, i) => (
         <motion.div
           key={i}
-          className="absolute w-3 h-3 rounded-full border border-violet-500/50"
+          className="absolute w-3 h-3 rounded-full border border-[#590907]/50"
           style={{ top: `${i * 8}%` }}
           animate={{
             x: [0, 40, 0, -40, 0],
@@ -164,7 +170,7 @@ function DNAHelix() {
       {[...Array(12)].map((_, i) => (
         <motion.div
           key={`pair-${i}`}
-          className="absolute w-3 h-3 rounded-full border border-cyan-500/50"
+          className="absolute w-3 h-3 rounded-full border border-[#A5A79B]/50"
           style={{ top: `${i * 8}%` }}
           animate={{
             x: [0, -40, 0, 40, 0],
@@ -197,7 +203,7 @@ function NeuralNetwork() {
       {nodes.map((node, i) => (
         <motion.div
           key={i}
-          className="absolute w-2 h-2 rounded-full bg-violet-500/40"
+          className="absolute w-2 h-2 rounded-full bg-[#590907]/40"
           style={{ right: `${100 - node.x}%`, top: `${node.y}%` }}
           animate={{
             scale: [1, 1.5, 1],
@@ -214,7 +220,7 @@ function NeuralNetwork() {
       {nodes.slice(0, -1).map((node, i) => (
         <motion.div
           key={`line-${i}`}
-          className="absolute w-px bg-gradient-to-b from-violet-500/20 to-cyan-500/20"
+          className="absolute w-px bg-gradient-to-b from-[#590907]/20 to-[#A5A79B]/20"
           style={{
             right: `${100 - node.x}%`,
             top: `${node.y}%`,
@@ -236,7 +242,7 @@ function FloatingTraits() {
       {traits.map((trait, i) => (
         <motion.span
           key={i}
-          className="absolute text-xs font-medium text-violet-500/15"
+          className="absolute text-xs font-medium text-[#590907]/15"
           style={{
             left: `${15 + i * 18}%`,
             top: `${8 + (i % 3) * 35}%`,
@@ -266,7 +272,7 @@ function PulseWave() {
       {[...Array(3)].map((_, i) => (
         <motion.div
           key={i}
-          className="absolute w-96 h-96 rounded-full border border-violet-500/10"
+          className="absolute w-96 h-96 rounded-full border border-[#590907]/10"
           animate={{
             scale: [0.5, 2.5],
             opacity: [0.3, 0],
@@ -294,17 +300,17 @@ export default function AboutPage() {
 
       {/* Same violet/cyan glowing orbs for color consistency */}
       <motion.div
-        className="absolute top-40 left-20 w-40 h-40 rounded-full bg-violet-500/10 blur-3xl"
+        className="absolute top-40 left-20 w-40 h-40 rounded-full bg-[#590907]/10 blur-3xl"
         animate={{ scale: [1, 1.4, 1], opacity: [0.3, 0.5, 0.3] }}
         transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
       />
       <motion.div
-        className="absolute bottom-40 right-20 w-48 h-48 rounded-full bg-cyan-500/10 blur-3xl"
+        className="absolute bottom-40 right-20 w-48 h-48 rounded-full bg-[#A5A79B]/10 blur-3xl"
         animate={{ scale: [1.2, 1, 1.2], opacity: [0.3, 0.5, 0.3] }}
         transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
       />
       <motion.div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 rounded-full bg-pink-500/5 blur-3xl"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 rounded-full bg-[#E8D2B5]/5 blur-3xl"
         animate={{ scale: [1, 1.2, 1], opacity: [0.2, 0.4, 0.2] }}
         transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
       />
@@ -319,17 +325,17 @@ export default function AboutPage() {
             className="text-center"
           >
             <motion.div
-              className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-violet-500/20 to-cyan-500/20 border border-violet-500/30 mb-6"
+              className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-[#590907]/20 to-[#A5A79B]/20 border border-[#590907]/30 mb-6"
               animate={{
                 boxShadow: [
-                  "0 0 20px rgba(139, 92, 246, 0.3)",
-                  "0 0 40px rgba(139, 92, 246, 0.5)",
-                  "0 0 20px rgba(139, 92, 246, 0.3)",
+                  "0 0 20px rgba(89, 9, 7, 0.3)",
+                  "0 0 40px rgba(89, 9, 7, 0.5)",
+                  "0 0 20px rgba(89, 9, 7, 0.3)",
                 ],
               }}
               transition={{ duration: 2, repeat: Infinity }}
             >
-              <User className="text-violet-400" size={28} />
+              <User className="text-[#a04040]" size={28} />
             </motion.div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
@@ -340,7 +346,7 @@ export default function AboutPage() {
             </p>
 
             <motion.div
-              className="mt-8 h-px w-32 mx-auto bg-gradient-to-r from-transparent via-violet-500 to-transparent"
+              className="mt-8 h-px w-32 mx-auto bg-gradient-to-r from-transparent via-[#590907] to-transparent"
               animate={{ scaleX: [0.5, 1, 0.5], opacity: [0.5, 1, 0.5] }}
               transition={{ duration: 2, repeat: Infinity }}
             />
@@ -362,26 +368,26 @@ export default function AboutPage() {
               <GlassCard className="p-8 relative overflow-hidden">
                 {/* DNA decoration on card */}
                 <motion.div
-                  className="absolute -right-4 top-1/2 -translate-y-1/2 w-1 h-32 bg-gradient-to-b from-violet-500/30 via-cyan-500/30 to-violet-500/30 rounded-full"
+                  className="absolute -right-4 top-1/2 -translate-y-1/2 w-1 h-32 bg-gradient-to-b from-[#590907]/30 via-[#A5A79B]/30 to-[#590907]/30 rounded-full"
                   animate={{ height: ["30%", "50%", "30%"] }}
                   transition={{ duration: 3, repeat: Infinity }}
                 />
                 
-                <div className="aspect-square relative rounded-xl overflow-hidden bg-gradient-to-br from-violet-500/20 to-cyan-500/20">
+                <div className="aspect-square relative rounded-xl overflow-hidden bg-gradient-to-br from-[#590907]/20 to-[#A5A79B]/20">
                   <img 
                     src="/abu.jpeg" 
                     alt={siteConfig.name}
                     className="w-full h-full object-cover"
                   />
                   {/* Decorative elements */}
-                  <div className="absolute top-4 right-4 w-20 h-20 rounded-full bg-violet-500/30 blur-2xl" />
-                  <div className="absolute bottom-4 left-4 w-16 h-16 rounded-full bg-cyan-500/30 blur-2xl" />
+                  <div className="absolute top-4 right-4 w-20 h-20 rounded-full bg-[#590907]/30 blur-2xl" />
+                  <div className="absolute bottom-4 left-4 w-16 h-16 rounded-full bg-[#A5A79B]/30 blur-2xl" />
                 </div>
                 <div className="mt-6 text-center">
                   <h3 className="text-2xl font-bold text-white mb-2">
                     {siteConfig.name}
                   </h3>
-                  <p className="text-violet-400 text-sm font-medium mb-1">
+                  <p className="text-[#a04040] text-sm font-medium mb-1">
                     Undergraduate Teaching Assistant
                   </p>
                   <p className="text-gray-400 flex items-center justify-center gap-2">
@@ -405,17 +411,17 @@ export default function AboutPage() {
               </h2>
               <div className="space-y-4 text-gray-400 leading-relaxed">
                 <p>
-                  I&apos;ve had the chance to work as a <span className="text-violet-400 font-medium">Undergraduate Teaching Assistant</span> 3 times before, 
+                  I&apos;ve had the chance to work as an <span className="text-[#a04040] font-medium">Undergraduate Teaching Assistant</span> for 6 consecutive trimesters, 
                   and it&apos;s been a great experience each time. I&apos;m someone who&apos;s responsible and organized, 
                   and I genuinely enjoy helping others understand new things.
                 </p>
                 <p>
-                  Being able to <span className="text-cyan-400">support students</span> and be part of their learning process 
+                  Being able to <span className="text-[#A5A79B]">support students</span> and be part of their learning process 
                   is something I find really fulfilling, so I&apos;m excited for the opportunity to do it again.
                 </p>
                 <p>
-                  Beyond teaching, I&apos;ve built projects like the <span className="text-cyan-400">Advyon legal-tech platform</span>, 
-                  and participated in multiple project competitions like AOOP and SAD Labs.
+                  Beyond teaching, I&apos;ve built projects like the <span className="text-[#A5A79B]">Advyon legal-tech platform</span>, 
+                  and participated in multiple project competitions like AOOP, SAD, and Software Engineering Labs.
                 </p>
               </div>
 
@@ -469,7 +475,7 @@ export default function AboutPage() {
           <div className="relative">
             {/* Timeline line with pulse */}
             <motion.div 
-              className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-violet-500 via-cyan-500 to-pink-500"
+              className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-[#590907] via-[#A5A79B] to-[#E8D2B5]"
               animate={{ opacity: [0.5, 1, 0.5] }}
               transition={{ duration: 2, repeat: Infinity }}
             />
@@ -496,7 +502,7 @@ export default function AboutPage() {
                     }`}
                   >
                     <GlassCard className="p-6" variant="hover">
-                      <span className="text-sm text-violet-400 font-medium">
+                      <span className="text-sm text-[#a04040] font-medium">
                         {item.year}
                       </span>
                       <h3 className="text-xl font-bold text-white mt-1">
@@ -510,17 +516,17 @@ export default function AboutPage() {
 
                   {/* Icon with pulse */}
                   <motion.div 
-                    className="absolute left-0 md:left-1/2 md:-translate-x-1/2 w-8 h-8 rounded-full bg-violet-500/20 border-2 border-violet-500 flex items-center justify-center"
+                    className="absolute left-0 md:left-1/2 md:-translate-x-1/2 w-8 h-8 rounded-full bg-[#590907]/20 border-2 border-[#590907] flex items-center justify-center"
                     animate={{
                       boxShadow: [
-                        "0 0 0px rgba(139, 92, 246, 0.3)",
-                        "0 0 15px rgba(139, 92, 246, 0.5)",
-                        "0 0 0px rgba(139, 92, 246, 0.3)",
+                        "0 0 0px rgba(89, 9, 7, 0.3)",
+                        "0 0 15px rgba(89, 9, 7, 0.5)",
+                        "0 0 0px rgba(89, 9, 7, 0.3)",
                       ],
                     }}
                     transition={{ duration: 2, repeat: Infinity, delay: index * 0.2 }}
                   >
-                    <Icon size={14} className="text-violet-400" />
+                    <Icon size={14} className="text-[#a04040]" />
                   </motion.div>
 
                   {/* Empty space for alternating layout */}
@@ -576,7 +582,7 @@ export default function AboutPage() {
                   'VS Code': '#007ACC',
                   'Figma': '#F24E1E',
                 };
-                return colors[name] || '#8b5cf6';
+                return colors[name] || '#590907';
               };
 
               const color = getColor(skill.name);

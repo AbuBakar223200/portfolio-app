@@ -44,7 +44,7 @@ function TypewriterText({ text, className }: { text: string; className?: string 
   return (
     <span className={className}>
       {displayText}
-      <span className={`${showCursor ? 'opacity-100' : 'opacity-0'} text-violet-400`}>|</span>
+      <span className={`${showCursor ? 'opacity-100' : 'opacity-0'} text-[#a04040]`}>|</span>
     </span>
   );
 }
@@ -88,7 +88,7 @@ function MatrixRain() {
       {[...Array(20)].map((_, i) => (
         <motion.div
           key={i}
-          className="absolute text-green-500 font-mono text-xs"
+          className="absolute text-[#A5A79B] font-mono text-xs"
           style={{ left: `${i * 5}%` }}
           initial={{ y: -100, opacity: 0 }}
           animate={{ 
@@ -113,7 +113,7 @@ function MatrixRain() {
 function ScanLine() {
   return (
     <motion.div
-      className="absolute left-0 right-0 h-px bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent pointer-events-none"
+      className="absolute left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#A5A79B]/50 to-transparent pointer-events-none"
       animate={{ top: ["0%", "100%"] }}
       transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
     />
@@ -180,7 +180,7 @@ function PulseRings() {
       {[...Array(3)].map((_, i) => (
         <motion.div
           key={i}
-          className="absolute w-64 h-64 rounded-full border border-violet-500/20"
+          className="absolute w-64 h-64 rounded-full border border-[#590907]/20"
           animate={{
             scale: [1, 2, 2],
             opacity: [0.5, 0.2, 0],
@@ -223,8 +223,8 @@ export default function HomePage() {
                   transition={{ duration: 0.5, delay: 0.1 }}
                   className="flex items-center gap-2"
                 >
-                  <Terminal className="text-violet-400" size={20} />
-                  <span className="text-lg text-violet-400 font-mono">
+                  <Terminal className="text-[#a04040]" size={20} />
+                  <span className="text-lg text-[#a04040] font-mono">
                     <TypewriterText text="Hello, I'm" />
                   </span>
                 </motion.div>
@@ -249,7 +249,7 @@ export default function HomePage() {
                   {siteConfig.role.split("•").map((role, i) => (
                     <motion.span
                       key={i}
-                      className="px-3 py-1 rounded-full bg-violet-500/10 border border-violet-500/30 text-violet-300 text-sm"
+                      className="px-3 py-1 rounded-full bg-[#590907]/10 border border-[#590907]/30 text-[#E8D2B5] text-sm"
                       initial={{ opacity: 0, scale: 0 }}
                       animate={{ opacity: 1, scale: 1 }}
                       transition={{ delay: 0.8 + i * 0.1 }}
@@ -265,7 +265,7 @@ export default function HomePage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 1 }}
-                className="text-gray-400 leading-relaxed max-w-lg font-mono text-sm border-l-2 border-violet-500/50 pl-4"
+                className="text-gray-400 leading-relaxed max-w-lg font-mono text-sm border-l-2 border-[#590907]/50 pl-4"
               >
                 {siteConfig.description}
               </motion.p>
@@ -281,7 +281,7 @@ export default function HomePage() {
                   <motion.div
                     whileHover={{ 
                       scale: 1.05,
-                      boxShadow: "0 0 30px rgba(139, 92, 246, 0.5)",
+                      boxShadow: "0 0 30px rgba(89, 9, 7, 0.5)",
                     }}
                     whileTap={{ scale: 0.95 }}
                     className="glow-button px-6 py-3 rounded-xl font-medium text-white flex items-center gap-2 group relative overflow-hidden"
@@ -300,7 +300,7 @@ export default function HomePage() {
                 </Link>
                 <Link href="/cv.pdf" target="_blank">
                   <motion.div
-                    whileHover={{ scale: 1.05, borderColor: "rgba(139, 92, 246, 0.5)" }}
+                    whileHover={{ scale: 1.05, borderColor: "rgba(89, 9, 7, 0.5)" }}
                     whileTap={{ scale: 0.95 }}
                     className="px-6 py-3 rounded-xl font-medium border border-white/20 bg-white/5 hover:bg-white/10 transition-all flex items-center gap-2"
                   >
@@ -328,12 +328,12 @@ export default function HomePage() {
                   <GlassCard className="p-8 relative overflow-hidden backdrop-blur-xl">
                     {/* Holographic overlay */}
                     <motion.div
-                      className="absolute inset-0 bg-gradient-to-br from-violet-500/10 via-cyan-500/10 to-pink-500/10"
+                      className="absolute inset-0 bg-gradient-to-br from-[#590907]/10 via-[#A5A79B]/10 to-[#E8D2B5]/10"
                       animate={{
                         background: [
-                          "linear-gradient(45deg, rgba(139,92,246,0.1), rgba(6,182,212,0.1), rgba(236,72,153,0.1))",
-                          "linear-gradient(90deg, rgba(6,182,212,0.1), rgba(236,72,153,0.1), rgba(139,92,246,0.1))",
-                          "linear-gradient(135deg, rgba(236,72,153,0.1), rgba(139,92,246,0.1), rgba(6,182,212,0.1))",
+                          "linear-gradient(45deg, rgba(89,9,7,0.1), rgba(165,167,155,0.1), rgba(232,210,181,0.1))",
+                          "linear-gradient(90deg, rgba(165,167,155,0.1), rgba(232,210,181,0.1), rgba(89,9,7,0.1))",
+                          "linear-gradient(135deg, rgba(232,210,181,0.1), rgba(89,9,7,0.1), rgba(165,167,155,0.1))",
                         ],
                       }}
                       transition={{ duration: 5, repeat: Infinity }}
@@ -368,8 +368,8 @@ export default function HomePage() {
                           animate={{ opacity: 1, x: 0 }}
                           transition={{ delay: 0.8 }}
                         >
-                          <span className="text-violet-400">const</span>{" "}
-                          <span className="text-cyan-400">developer</span>{" "}
+                          <span className="text-[#a04040]">const</span>{" "}
+                          <span className="text-[#A5A79B]">developer</span>{" "}
                           <span className="text-white">=</span>{" "}
                           <span className="text-yellow-400">{`{`}</span>
                         </motion.p>
@@ -389,11 +389,11 @@ export default function HomePage() {
                           transition={{ delay: 1.2 }}
                         >
                           <span className="text-gray-400">skills:</span>{" "}
-                          <span className="text-cyan-400">[</span>
+                          <span className="text-[#A5A79B]">[</span>
                           <span className="text-green-400">&quot;React&quot;</span>,{" "}
                           <span className="text-green-400">&quot;Node.js&quot;</span>,{" "}
                           <span className="text-green-400">&quot;TypeScript&quot;</span>
-                          <span className="text-cyan-400">]</span>,
+                          <span className="text-[#A5A79B]">]</span>,
                         </motion.p>
                         <motion.p
                           className="pl-4"
@@ -438,12 +438,12 @@ export default function HomePage() {
 
                     {/* Glow effects */}
                     <motion.div
-                      className="absolute -top-20 -right-20 w-40 h-40 bg-violet-500/30 rounded-full blur-3xl"
+                      className="absolute -top-20 -right-20 w-40 h-40 bg-[#590907]/30 rounded-full blur-3xl"
                       animate={{ scale: [1, 1.3, 1], opacity: [0.3, 0.5, 0.3] }}
                       transition={{ duration: 4, repeat: Infinity }}
                     />
                     <motion.div
-                      className="absolute -bottom-10 -left-10 w-32 h-32 bg-cyan-500/20 rounded-full blur-3xl"
+                      className="absolute -bottom-10 -left-10 w-32 h-32 bg-[#A5A79B]/20 rounded-full blur-3xl"
                       animate={{ scale: [1.2, 1, 1.2], opacity: [0.2, 0.4, 0.2] }}
                       transition={{ duration: 5, repeat: Infinity }}
                     />
@@ -460,15 +460,15 @@ export default function HomePage() {
                 <motion.div
                   animate={{
                     boxShadow: [
-                      "0 0 10px rgba(6, 182, 212, 0.3)",
-                      "0 0 20px rgba(6, 182, 212, 0.5)",
-                      "0 0 10px rgba(6, 182, 212, 0.3)",
+                      "0 0 10px rgba(165, 167, 155, 0.3)",
+                      "0 0 20px rgba(165, 167, 155, 0.5)",
+                      "0 0 10px rgba(165, 167, 155, 0.3)",
                     ],
                   }}
                   transition={{ duration: 2, repeat: Infinity }}
                   className="rounded-2xl"
                 >
-                  <GlassCard className="px-3 py-1.5 text-xs font-medium text-cyan-400 border-cyan-500/30">
+                  <GlassCard className="px-3 py-1.5 text-xs font-medium text-[#A5A79B] border-[#A5A79B]/30">
                     TypeScript
                   </GlassCard>
                 </motion.div>
@@ -487,15 +487,15 @@ export default function HomePage() {
                 <motion.div
                   animate={{
                     boxShadow: [
-                      "0 0 10px rgba(139, 92, 246, 0.3)",
-                      "0 0 20px rgba(139, 92, 246, 0.5)",
-                      "0 0 10px rgba(139, 92, 246, 0.3)",
+                      "0 0 10px rgba(89, 9, 7, 0.3)",
+                      "0 0 20px rgba(89, 9, 7, 0.5)",
+                      "0 0 10px rgba(89, 9, 7, 0.3)",
                     ],
                   }}
                   transition={{ duration: 2, repeat: Infinity }}
                   className="rounded-2xl"
                 >
-                  <GlassCard className="px-3 py-1.5 text-xs font-medium text-violet-400 border-violet-500/30">
+                  <GlassCard className="px-3 py-1.5 text-xs font-medium text-[#a04040] border-[#590907]/30">
                     Full-Stack
                   </GlassCard>
                 </motion.div>
@@ -506,7 +506,7 @@ export default function HomePage() {
                 animate={{ x: [0, 5, 0], scale: [1, 1.1, 1] }}
                 transition={{ duration: 3, repeat: Infinity }}
               >
-                <GlassCard className="px-3 py-1.5 text-xs font-medium text-pink-400 border-pink-500/30">
+                <GlassCard className="px-3 py-1.5 text-xs font-medium text-[#E8D2B5] border-[#E8D2B5]/30">
                   React 19
                 </GlassCard>
               </motion.div>
@@ -530,7 +530,7 @@ export default function HomePage() {
               animate={{ rotate: [0, 360] }}
               transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
             >
-              <Sparkles className="text-violet-400" size={32} />
+              <Sparkles className="text-[#a04040]" size={32} />
             </motion.div>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Quick <span className="gradient-text">Highlights</span>
@@ -558,7 +558,7 @@ export default function HomePage() {
                   >
                     {/* Animated background */}
                     <motion.div
-                      className="absolute inset-0 bg-gradient-to-br from-violet-500/5 to-cyan-500/5"
+                      className="absolute inset-0 bg-gradient-to-br from-[#590907]/5 to-[#A5A79B]/5"
                       animate={{
                         opacity: [0.5, 1, 0.5],
                       }}
@@ -567,7 +567,7 @@ export default function HomePage() {
                     
                     <div className="relative z-10">
                       <motion.div
-                        className="mb-4 inline-flex p-3 rounded-xl bg-violet-500/10 text-violet-400 group-hover:bg-violet-500/20 transition-colors"
+                        className="mb-4 inline-flex p-3 rounded-xl bg-[#590907]/10 text-[#a04040] group-hover:bg-[#590907]/20 transition-colors"
                         whileHover={{ rotate: 360 }}
                         transition={{ duration: 0.5 }}
                       >
@@ -577,9 +577,9 @@ export default function HomePage() {
                         className="text-3xl md:text-4xl font-bold gradient-text mb-2"
                         animate={{
                           textShadow: [
-                            "0 0 10px rgba(139, 92, 246, 0.3)",
-                            "0 0 20px rgba(139, 92, 246, 0.5)",
-                            "0 0 10px rgba(139, 92, 246, 0.3)",
+                            "0 0 10px rgba(89, 9, 7, 0.3)",
+                            "0 0 20px rgba(89, 9, 7, 0.5)",
+                            "0 0 10px rgba(89, 9, 7, 0.3)",
                           ],
                         }}
                         transition={{ duration: 2, repeat: Infinity, delay: index * 0.3 }}
@@ -615,7 +615,7 @@ export default function HomePage() {
               <motion.div
                 className="absolute inset-0 rounded-xl"
                 style={{
-                  background: "linear-gradient(90deg, rgba(139,92,246,0.5), rgba(6,182,212,0.5), rgba(236,72,153,0.5), rgba(139,92,246,0.5))",
+                  background: "linear-gradient(90deg, rgba(89,9,7,0.5), rgba(165,167,155,0.5), rgba(232,210,181,0.5), rgba(89,9,7,0.5))",
                   backgroundSize: "300% 100%",
                 }}
                 animate={{
@@ -644,7 +644,7 @@ export default function HomePage() {
                 </p>
                 <Link href="/contact">
                   <motion.button
-                    whileHover={{ scale: 1.1, boxShadow: "0 0 40px rgba(139, 92, 246, 0.6)" }}
+                    whileHover={{ scale: 1.1, boxShadow: "0 0 40px rgba(89, 9, 7, 0.6)" }}
                     whileTap={{ scale: 0.95 }}
                     className="glow-button px-8 py-4 rounded-xl font-medium text-white inline-flex items-center gap-2 group relative overflow-hidden"
                   >
