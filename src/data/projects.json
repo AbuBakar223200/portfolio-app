@@ -6,7 +6,7 @@
     "longDescription": "A comprehensive full-stack legal technology solution engineered with React 19, Vite, and Tailwind CSS. Features modular case management, document workflow pipelines, community legal discussions, and TanStack Query state orchestration.",
     "techStack": ["React 19", "Vite", "Tailwind CSS", "Zustand", "TanStack Query", "REST APIs"],
     "githubUrl": "https://github.com/AbuBakar223200/advyon-client",
-    "liveUrl": "https://github.com/AbuBakar223200/advyon-client",
+    "liveUrl": "https://advyon.vercel.app/",
     "featured": true,
     "category": "web"
   },
