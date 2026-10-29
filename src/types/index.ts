@@ -8,7 +8,7 @@ export interface Project {
   liveUrl?: string;
   imageUrl?: string;
   featured: boolean;
-  category: "web" | "backend" | "ai" | "mobile" | "other";
+  category: "web" | "backend" | "software" | "algorithms" | "ai" | "mobile" | "other";
 }
 
 export interface Skill {

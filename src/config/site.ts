@@ -19,12 +19,12 @@ export interface SiteConfig {
 
 export const siteConfig: SiteConfig = {
   name: "Md. Abu Bakar",
-  role: "CSE Student • Teaching Assistant • Full-Stack Developer",
-  location: "Mouchak, Siddhirgonj, Narayanganj",
+  role: "Full-Stack Software Engineer • Undergraduate Teaching Assistant • CSE Senior",
+  location: "Dhaka, Bangladesh",
   email: "abubakarmunshi786@gmail.com",
   mobile: "+8801521703968",
   description:
-    "Passionate about building modern web applications with cutting-edge technologies. I specialize in React, Next.js, and Node.js, with experience in legal-tech and educational platforms. Currently seeking opportunities to contribute to innovative projects.",
+    "Full-Stack Software Engineer and 6x Undergraduate Teaching Assistant with deep expertise in modern React ecosystems, Node.js, and scalable web architecture. Proven track record building enterprise legal-tech platforms, educational software systems, and championing university engineering competitions.",
   socials: {
     github: "https://github.com/AbuBakar223200",
     linkedin: "https://www.linkedin.com/in/abu-bakar-87b9aa228/",
@@ -34,22 +34,22 @@ export const siteConfig: SiteConfig = {
     {
       title: "Years Coding",
       value: "4+",
-      description: "Building digital experiences since 2021",
+      description: "Engineering digital solutions since 2021",
     },
     {
       title: "Tech Stack",
-      value: "10+",
-      description: "React, Vite, Node.js, TypeScript & more",
+      value: "15+",
+      description: "React 19, Next.js, Node.js, C++ & Databases",
     },
     {
       title: "Projects Built",
-      value: "8+",
-      description: "From web apps to collaborative platforms",
+      value: "10+",
+      description: "Production web platforms, APIs & software",
     },
     {
-      title: "Contributions",
-      value: "5+",
-      description: "Open source and team projects",
+      title: "Students Mentored",
+      value: "300+",
+      description: "6 consecutive trimesters as Teaching Assistant",
     },
   ],
 };

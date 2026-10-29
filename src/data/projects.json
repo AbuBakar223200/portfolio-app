@@ -2,83 +2,84 @@
   {
     "id": "1",
     "title": "Advyon - Legal Tech Platform",
-    "description": "Modern legal-tech platform delivering case management, document workflows, community discussions, and integrated AI assistance.",
-    "longDescription": "A comprehensive legal-tech solution built with React 19, Vite, and Tailwind CSS. Features include case management, document workflows, community discussions, and AI-powered assistance. Uses Zustand for state management and TanStack Query for data fetching.",
-    "techStack": ["React 19", "Vite", "Tailwind CSS", "Zustand", "TanStack Query", "React Router v7"],
+    "description": "Enterprise-grade legal technology platform delivering automated case tracking, legal document workflows, and AI-assisted inquiry handling.",
+    "longDescription": "A comprehensive full-stack legal technology solution engineered with React 19, Vite, and Tailwind CSS. Features modular case management, document workflow pipelines, community legal discussions, and TanStack Query state orchestration.",
+    "techStack": ["React 19", "Vite", "Tailwind CSS", "Zustand", "TanStack Query", "REST APIs"],
     "githubUrl": "https://github.com/AbuBakar223200/advyon-client",
+    "liveUrl": "https://github.com/AbuBakar223200/advyon-client",
     "featured": true,
     "category": "web"
   },
   {
     "id": "2",
-    "title": "Advyon Server",
-    "description": "Backend API service for the Advyon legal-tech platform with authentication, case management, and document handling.",
-    "techStack": ["Node.js", "Express", "MongoDB", "JWT"],
+    "title": "Advyon Backend Architecture & Services",
+    "description": "Secure, high-concurrency RESTful API backend handling JWT authentication, role-based access control (RBAC), and document pipelines.",
+    "techStack": ["Node.js", "Express.js", "MongoDB", "JWT Auth", "REST APIs"],
     "githubUrl": "https://github.com/AbuBakar223200/advyon-server",
     "featured": false,
     "category": "backend"
   },
   {
     "id": "3",
-    "title": "Skill Paradox",
-    "description": "A skill development and learning platform with frontend and backend components for educational content delivery.",
-    "techStack": ["React", "Vite", "Tailwind CSS", "Node.js"],
+    "title": "Skill Paradox - EdTech Learning Platform",
+    "description": "Collaborative learning platform providing interactive course delivery, student progress metrics, and modular assessment dashboards.",
+    "techStack": ["React", "Vite", "Tailwind CSS", "Node.js", "Zustand"],
     "githubUrl": "https://github.com/AbuBakar223200/skill-paradox-frontend",
     "featured": true,
     "category": "web"
   },
   {
     "id": "4",
-    "title": "Skill Paradox Backend",
-    "description": "RESTful API backend for the Skill Paradox learning platform with user management and content delivery.",
-    "techStack": ["Node.js", "Express", "MongoDB"],
+    "title": "Skill Paradox API & Management Engine",
+    "description": "Scalable RESTful microservices engine powering user authentication, educational content distribution, and automated evaluation.",
+    "techStack": ["Node.js", "Express.js", "MongoDB", "Mongoose"],
     "githubUrl": "https://github.com/AbuBakar223200/skill-paradox-backend",
     "featured": false,
     "category": "backend"
   },
   {
     "id": "5",
-    "title": "IELTS Paradox",
-    "description": "An IELTS preparation application built with Java, featuring practice tests and learning modules using OOP principles.",
-    "techStack": ["Java", "JavaFX", "CSS", "OOP"],
+    "title": "IELTS Paradox - Desktop Examination Suite",
+    "description": "Desktop examination and practice simulation suite architected with modular Object-Oriented principles, timed test logic, and scoring engines.",
+    "techStack": ["Java", "JavaFX", "OOP Architecture", "CSS"],
     "githubUrl": "https://github.com/AbuBakar223200/IELTS_Paradox-AOOP-",
     "featured": true,
-    "category": "web"
+    "category": "software"
   },
   {
     "id": "6",
-    "title": "IELTS Paradox (Web)",
-    "description": "Web version of the IELTS exam preparation platform with enhanced features and accessibility.",
-    "techStack": ["Java", "JavaFX"],
+    "title": "IELTS Paradox Web Practice Portal",
+    "description": "Cross-platform web practice portal extending examination prep modules, study materials, and interactive tests.",
+    "techStack": ["JavaScript", "HTML5", "CSS3", "Java"],
     "githubUrl": "https://github.com/AbuBakar223200/ielts-paradox",
     "featured": false,
     "category": "web"
   },
   {
     "id": "7",
-    "title": "Tic Tac Toe Game",
-    "description": "A classic Tic Tac Toe game implementation with a clean UI and game logic.",
-    "techStack": ["JavaScript", "HTML", "CSS"],
-    "githubUrl": "https://github.com/AbuBakar223200/tic-tac-toe-game",
+    "title": "Data Structures & Algorithms Repository",
+    "description": "Production-grade implementations of fundamental and advanced data structures, graph traversals, and competitive programming algorithms in C++.",
+    "techStack": ["C++", "Data Structures", "Graph Theory", "Algorithms"],
+    "githubUrl": "https://github.com/AbuBakar223200/CPP",
     "featured": false,
-    "category": "web"
+    "category": "algorithms"
   },
   {
     "id": "8",
-    "title": "C++ Code",
-    "description": "Collection of C++ programs demonstrating data structures, algorithms, and problem-solving techniques.",
-    "techStack": ["C++", "Data Structures", "Algorithms"],
-    "githubUrl": "https://github.com/AbuBakar223200/CPP",
+    "title": "Python Automation & Core Engineering Lab",
+    "description": "Collection of automated workflows, scripting utilities, data processing routines, and algorithmic problem-solving in Python.",
+    "techStack": ["Python", "Automation", "Data Structures", "Scripting"],
+    "githubUrl": "https://github.com/AbuBakar223200/Python",
     "featured": false,
-    "category": "codes"
+    "category": "algorithms"
   },
   {
     "id": "9",
-    "title": "Python Code",
-    "description": "Various Python scripts showcasing automation, scripting, and programming fundamentals.",
-    "techStack": ["Python"],
-    "githubUrl": "https://github.com/AbuBakar223200/Python",
+    "title": "Interactive Turn-Based Engine & DOM State",
+    "description": "Engineered turn-based game application demonstrating deterministic game state machines, clean DOM manipulation, and responsive UI layout.",
+    "techStack": ["JavaScript", "HTML5", "CSS3", "State Machines"],
+    "githubUrl": "https://github.com/AbuBakar223200/tic-tac-toe-game",
     "featured": false,
-    "category": "codes"
+    "category": "web"
   }
 ]
